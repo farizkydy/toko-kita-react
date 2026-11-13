@@ -1,7 +1,7 @@
-# Branch `live/1-inline-style`: hasil Live Coding 1 (10 menit)
+# Branch `day26/live/1-inline-style`: hasil Live Coding 1 (10 menit)
 
 **Untuk:** mentor (referensi live coding) dan student (cadangan jika tertinggal).
-**Mulai dari:** `study-case` · **Lanjut ke:** `live/2-ui-library`
+**Mulai dari:** `day26/study-case` · **Lanjut ke:** `day26/live/2-ui-library`
 
 ## Yang ditulis mentor
 1. Object `cardStyle` di `ServiceCard.jsx`
@@ -24,4 +24,4 @@ Lihat perubahannya: `git diff study-case..live/1-inline-style`
 Arahkan mouse ke kartu: **tidak ada efek hover**. Inline style tidak mendukung `:hover`.
 
 ## Tugas mandiri 1
-Tambah kartu ke-5 "Poin Reward" dengan gaya sendiri. Solusinya ada di `solution/mandiri-1`.
+Tambah kartu ke-5 "Poin Reward" dengan gaya sendiri. Solusinya ada di `day26/solution/mandiri-1`.
