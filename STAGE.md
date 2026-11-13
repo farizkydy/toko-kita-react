@@ -1,4 +1,4 @@
-# Branch `expected-result`: hasil akhir seluruh sesi Day 26
+# Branch `day26/expected-result`: hasil akhir seluruh sesi Day 26
 
 Gabungan semua tahap: inline style → Tailwind + Card/Badge/Button → state di parent →
 search, filter kategori, pilih banyak, ringkasan + total, empty state → ikon + hover dari prompt AI,
