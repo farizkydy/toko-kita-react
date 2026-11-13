@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
 import { formatRupiah } from "./lib/format";
 import { cn } from "@/lib/utils";
@@ -17,6 +17,14 @@ export default function App() {
   const [selectedIds, setSelectedIds] = useState([]);
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("Semua");
+
+  useEffect(() => {
+    console.log("App tampil pertama kali");
+  }, []);
+
+  useEffect(() => {
+    document.title = query ? `Cari: ${query}` : "Toko Kita";
+  }, [query]);
 
   function toggle(id) {
     setSelectedIds((prev) =>

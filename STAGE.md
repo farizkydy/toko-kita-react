@@ -1,13 +1,19 @@
-# Branch `day27/study-case`: starter Day 27 (Toko Kita, hasil akhir Day 26)
+# Branch `day27/live/1-use-effect`: hasil Live Coding 1 (10 menit)
 
-**Lanjut ke:** `day27/live/1-use-effect`
+**Mulai dari:** `day27/study-case` · **Lanjut ke:** `day27/live/2-fetch-api`
 
-Katalog layanan Toko Kita dari Day 26 (search, filter kategori, pilih banyak, ringkasan total).
-Belum ada `useEffect` dan belum ada data dari server.
+## Urutan mengetik (sama dengan slide)
+1. `import { useEffect, useState } from "react"`
+2. Efek pertama dengan `[]`: `console.log("App tampil pertama kali")`
+3. Efek kedua dengan `[query]`: `document.title` ikut isi kolom cari
+4. Ketik di kolom cari, lihat judul tab berubah
 
-## Cara jalan
-`npm install` lalu `npm run dev`.
+## Poin bicara
+- Render itu murni; urusan di luar render (judul tab, log, request) ditaruh di `useEffect`
+- Dependency array: `[]` sekali, `[query]` saat query berubah, tanpa array setiap render
+- Di mode dev, log muncul dua kali karena `StrictMode` (bukan bug)
 
-## Cadangan jaringan
-`public/testimonials.json` berisi 6 testimonial berbentuk sama dengan API. Jika internet bermasalah,
-ganti `API_URL` menjadi `"/testimonials.json"` pada tahap fetch.
+## Tugas mandiri 1 (10 menit)
+Judul tab ikut jumlah pilihan: `Toko Kita (2 dipilih)`.
+Challenge: simpan `selectedIds` ke `localStorage` supaya tetap ada setelah reload.
+Kunci ada di `day27/solution/mandiri-1`.
