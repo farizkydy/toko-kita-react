@@ -1,19 +1,23 @@
-export default function ServiceCard({ icon, title, desc }) {
-  const cardStyle = {
-    border: "1px solid #e5e7eb",
-    borderRadius: 12,
-    padding: 16,
-    width: 220,
-    textAlign: "center",
-    backgroundColor: "#ffffff",
-  };
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
+export default function ServiceCard({ icon, title, desc }) {
   return (
-    <div style={cardStyle}>
-      <div style={{ fontSize: 32 }}>{icon}</div>
-      <h3 style={{ fontSize: 20, margin: "8px 0 4px", color: "#111827" }}>{title}</h3>
-      <p style={{ fontSize: 14, margin: "0 0 12px", color: "#6b7280" }}>{desc}</p>
-      <button onClick={() => alert(title)}>Lihat info</button>
-    </div>
+    <Card className="w-56 text-center transition hover:-translate-y-1 hover:shadow-lg">
+      <CardHeader>
+        <div className="text-3xl">{icon}</div>
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{desc}</CardDescription>
+      </CardHeader>
+      <CardContent className="flex flex-col items-center gap-3">
+        <Badge variant="secondary">Layanan</Badge>
+        <button
+          className="rounded-md bg-gray-900 px-3 py-1.5 text-sm text-white hover:bg-gray-700"
+          onClick={() => alert(title)}
+        >
+          Lihat info
+        </button>
+      </CardContent>
+    </Card>
   );
 }

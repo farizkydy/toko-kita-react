@@ -1,27 +1,28 @@
-# Branch `live/1-inline-style`: hasil Live Coding 1 (10 menit)
+# Branch `live/2-ui-library`: hasil Live Coding 2 (10 menit)
 
-**Untuk:** mentor (referensi live coding) dan student (cadangan jika tertinggal).
-**Mulai dari:** `study-case` · **Lanjut ke:** `live/2-ui-library`
+**Mulai dari:** `live/1-inline-style` · **Lanjut ke:** `live/3-parent-child`
+
+## Setup (sudah dikerjakan di branch ini)
+- Tailwind v4 lewat `@tailwindcss/vite`, `@import "tailwindcss"` di `index.css`
+- Alias `@` ke `src` (`vite.config.js` + `jsconfig.json`)
+- Komponen `Card` dan `Badge` di `src/components/ui/`, bentuknya sama dengan hasil
+  `npx shadcn@latest add card badge` (ditulis manual agar tidak bergantung internet kelas)
+
+> Di kelas, mentor boleh menjalankan CLI asli: `npx shadcn@latest init`, lalu
+> `npx shadcn@latest add card badge`. Jika jaringan bermasalah, pakai branch ini.
 
 ## Yang ditulis mentor
-1. Object `cardStyle` di `ServiceCard.jsx`
-2. `<div style={cardStyle}>`
-3. Style `h3` (20px) dan `p` (14px) langsung di tempat
-4. Container flex di `App.jsx` supaya kartu berjajar
-
-Lihat perubahannya: `git diff study-case..live/1-inline-style`
+1. Ganti `<div>` kartu menjadi `Card`, `CardHeader`, `CardTitle`, `CardDescription`, `CardContent`
+2. Tambah `Badge`
+3. Efek hover lewat `className`: `hover:-translate-y-1 hover:shadow-lg`
 
 ## Poin bicara
-- `style` menerima **object**, bukan string
-- Properti **camelCase** (`borderRadius`, bukan `border-radius`)
-- Angka otomatis jadi `px` (`padding: 16`)
-- Kurung kurawal dua: satu masuk ke JavaScript, satu adalah object
+- UI library = komponen jadi, kita tinggal rakit dan atur lewat `className`
+- Beda `style` (object) dan `className` (string kelas Tailwind)
+- Hover sekarang bisa, yang tadi tidak bisa di inline style
 
-## Hasil yang diharapkan
-4 kartu putih berjajar: sudut membulat 12, padding 16, lebar 220, teks rata tengah.
+## Catatan
+Gaya inline dihapus; semua lewat Tailwind. `cn()` menggabungkan class tanpa bentrok.
 
-## Batasan (jembatan ke tahap 2)
-Arahkan mouse ke kartu: **tidak ada efek hover**. Inline style tidak mendukung `:hover`.
-
-## Tugas mandiri 1
-Tambah kartu ke-5 "Poin Reward" dengan gaya sendiri. Solusinya ada di `solution/mandiri-1`.
+## Tugas mandiri 2
+Ubah varian Badge dan beri efek hover sendiri. Solusi: `solution/mandiri-2`.
