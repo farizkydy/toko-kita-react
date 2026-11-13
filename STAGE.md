@@ -1,28 +1,27 @@
-# Branch `study-case`: titik awal sesi (starter)
+# Branch `live/1-inline-style`: hasil Live Coding 1 (10 menit)
 
-**Untuk:** mentor dan student. Student mulai dari branch ini.
+**Untuk:** mentor (referensi live coding) dan student (cadangan jika tertinggal).
+**Mulai dari:** `study-case` · **Lanjut ke:** `live/2-ui-library`
 
-## Study case: "Layanan Toko Kami"
-Kamu membangun bagian **Services** di landing page sebuah toko online. Ada 4 layanan:
-Gratis Ongkir, Garansi 30 Hari, Bayar di Tempat (COD), dan Retur Mudah.
+## Yang ditulis mentor
+1. Object `cardStyle` di `ServiceCard.jsx`
+2. `<div style={cardStyle}>`
+3. Style `h3` (20px) dan `p` (14px) langsung di tempat
+4. Container flex di `App.jsx` supaya kartu berjajar
 
-## Kondisi saat ini (hasil Day 23–24)
-- `ServiceCard` sudah menerima props `icon`, `title`, `desc`
-- Tombol "Lihat info" memanggil `alert(title)` (event handling)
-- Belum ada styling sama sekali (tampilan polos)
+Lihat perubahannya: `git diff study-case..live/1-inline-style`
 
-## Tujuan akhir sesi (lihat branch `expected-result`)
-1. Kartu layanan **bergaya** (inline style, lalu komponen UI library)
-2. Kartu bisa **dipilih** dan parent (`App`) tahu mana yang dipilih
-3. Bisa memilih **lebih dari satu**, ada jumlah terpilih dan tombol **Reset**
-4. Kartu punya **Badge** dan efek **hover**
+## Poin bicara
+- `style` menerima **object**, bukan string
+- Properti **camelCase** (`borderRadius`, bukan `border-radius`)
+- Angka otomatis jadi `px` (`padding: 16`)
+- Kurung kurawal dua: satu masuk ke JavaScript, satu adalah object
 
-## Menjalankan
-```bash
-npm install
-npm run dev
-```
-Versi yang dipakai: Node 22, React 19, Vite 8.
+## Hasil yang diharapkan
+4 kartu putih berjajar: sudut membulat 12, padding 16, lebar 220, teks rata tengah.
 
-## Urutan kerja sesi
-`study-case` → `live/1-inline-style` → `live/2-ui-library` → `live/3-parent-child` → `live/4-ai-prompting`
+## Batasan (jembatan ke tahap 2)
+Arahkan mouse ke kartu: **tidak ada efek hover**. Inline style tidak mendukung `:hover`.
+
+## Tugas mandiri 1
+Tambah kartu ke-5 "Poin Reward" dengan gaya sendiri. Solusinya ada di `solution/mandiri-1`.
