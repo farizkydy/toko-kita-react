@@ -1,5 +1,6 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { formatRupiah } from "@/lib/format";
 import { BadgeCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -22,15 +23,12 @@ export default function ServiceCard({ icon, title, desc, category, price, popula
       <CardContent className="flex flex-col items-center gap-3">
         <div className="flex gap-2">
           <Badge variant="secondary">{category}</Badge>
-          {popular && <Badge className="bg-amber-100 text-amber-700">Populer</Badge>}
+          {popular && <Badge variant="warning">Populer</Badge>}
         </div>
         <p className="font-semibold">{formatRupiah(price)}</p>
-        <button
-          className="rounded-md bg-gray-900 px-3 py-1.5 text-sm text-white hover:bg-gray-700"
-          onClick={onSelect}
-        >
+        <Button variant={isSelected ? "default" : "outline"} onClick={onSelect}>
           {isSelected ? "Dipilih ✓" : "Pilih"}
-        </button>
+        </Button>
       </CardContent>
     </Card>
   );

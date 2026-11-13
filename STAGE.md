@@ -1,18 +1,19 @@
-# Branch `live/4-ai-prompting`: hasil Live Coding 4 (10 menit)
+# Branch `expected-result`: hasil akhir seluruh sesi Day 26
 
-**Mulai dari:** `live/3-parent-child` · **Lanjut ke:** `expected-result`
+Gabungan semua tahap: inline style → Tailwind + Card/Badge/Button → state di parent →
+search, filter kategori, pilih banyak, ringkasan + total, empty state → ikon + hover dari prompt AI,
+plus kartu ke-5 "Poin Reward".
 
-Mentor menulis prompt 4 bagian (lihat `PROMPT.md`), menempel hasilnya, lalu **mengecek** hasil AI.
+## Goal untuk dibuka di awal sesi
+"Hari ini kalian membangun **katalog layanan Toko Kita**: bisa dicari, difilter, dipilih lebih
+dari satu, dan ada ringkasan total harganya." Tunjukkan hasil jalan (`npm run dev`), bukan kodenya.
 
-## Hasil yang diharapkan
-Ikon `BadgeCheck` (lucide-react) di kiri judul, hover menaikkan kartu dan mengubah warna border.
-Semua props lama tidak berubah, klik tetap memilih kartu, search tetap jalan.
-Diff: `git diff live/3-parent-child..live/4-ai-prompting`
-
-## Poin bicara
-- AI itu asisten, bukan pengganti paham: selalu cek
-- Prompt bagus = Konteks + Tugas + Batasan + Format
-- Bagian **Batasan** mencegah AI merusak props yang sudah ada
-
-## Tugas mandiri 4 (7 menit)
-Tulis prompt sendiri untuk fitur kecil lain, tempel, lalu cek dengan daftar di `PROMPT.md`.
+## Daftar cek hasil akhir
+- [ ] 5 kartu, ikon di kiri judul, badge kategori dan "Populer", harga ("Gratis" jika 0)
+- [ ] Hover: kartu naik, border berubah
+- [ ] Klik kartu: biru + "Dipilih ✓", klik lagi: batal
+- [ ] Cari "retur" menyisakan 1 kartu; cari "zzz" menampilkan empty state
+- [ ] Chip kategori memfilter; kombinasi dengan search jalan
+- [ ] Panel ringkasan: jumlah, daftar, total benar (contoh: Garansi + COD = Rp20.000); Reset mengosongkan
+- [ ] Layar kecil: grid menjadi 1 kolom, panel pindah ke bawah
+- [ ] Console bersih, `npm run build` lolos
