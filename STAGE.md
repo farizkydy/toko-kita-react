@@ -1,6 +1,6 @@
-# Branch `live/2-ui-library`: hasil Live Coding 2 (10 menit)
+# Branch `day26/live/2-ui-library`: hasil Live Coding 2 (10 menit)
 
-**Mulai dari:** `live/1-inline-style` · **Lanjut ke:** `live/3-parent-child`
+**Mulai dari:** `day26/live/1-inline-style` · **Lanjut ke:** `day26/live/3-parent-child`
 
 ## Setup (sudah dikerjakan di branch ini)
 - Tailwind v4 lewat `@tailwindcss/vite`, `@import "tailwindcss"` di `index.css`
@@ -26,4 +26,4 @@
 Gaya inline dihapus; semua lewat Tailwind. `cn()` menggabungkan class tanpa bentrok.
 
 ## Tugas mandiri 2
-Ubah varian Badge dan beri efek hover sendiri. Solusi: `solution/mandiri-2`.
+Ubah varian Badge dan beri efek hover sendiri. Solusi: `day26/solution/mandiri-2`.
