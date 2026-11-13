@@ -1,21 +1,18 @@
-# Branch `day27/live/2-fetch-api`: hasil Live Coding 2 (15 menit)
+# Branch `day27/live/3-loading-error`: hasil Live Coding 3 (10 menit)
 
-**Mulai dari:** `day27/live/1-use-effect` · **Lanjut ke:** `day27/live/3-loading-error`
+**Mulai dari:** `day27/live/2-fetch-api` · **Lanjut ke:** `day27/live/4-react-query`
+
+Branch ini sudah memuat `TestimonialCard` (kunci mandiri 2) supaya semua peserta mulai dari titik sama.
 
 ## Urutan mengetik
-1. Buat `src/Testimonials.jsx`, `const API_URL = "https://jsonplaceholder.typicode.com/comments?_limit=6"`
-2. `useState([])` untuk `testimonials`
-3. `useEffect(() => { fetch(API_URL).then(res => res.json()).then(setTestimonials) }, [])`
-4. Tampilkan jumlah dan daftar `name` (dulu `<ul>` sederhana)
-5. Pasang `<Testimonials />` di `App.jsx`
+1. State `loading` (awal `true`) dan `error` (awal `null`)
+2. Cek `res.ok`: `fetch` tidak melempar error untuk status 404/500
+3. `.catch` mengisi error, `.finally` mematikan loading
+4. Render: "Memuat testimonial..." dan pesan error (`role="alert"`)
 
 ## Poin bicara
-- Request/response, JSON, status code
-- Kenapa `fetch` di `useEffect` dengan `[]`: sekali setelah render pertama
-- `name` pada data berisi kalimat lorem ipsum; pakai sebagai judul ulasan
+- Tiga keadaan data: loading, error, sukses
+- Uji dengan URL yang salah, error harus tampil
 
-## Cadangan jaringan
-Ganti `API_URL` menjadi `"/testimonials.json"` (file ada di `public/`).
-
-## Tugas mandiri 2 (15 menit)
-Buat `TestimonialCard` (Card dari Day 26) dan tampilkan 6 kartu dalam grid. Kunci: `day27/solution/mandiri-2`.
+## Tugas mandiri 3 (15 menit)
+Tombol "Coba lagi" lewat state `attempt` di dependency array. Kunci: `day27/solution/mandiri-3`.
