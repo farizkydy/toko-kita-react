@@ -1,4 +1,4 @@
-# Branch `day27/live/1-use-effect`: hasil Live Coding 1 (10 menit)
+# Kunci untuk branch `day27/live/1-use-effect`: hasil Live Coding 1 (10 menit)
 
 **Mulai dari:** `day27/study-case` · **Lanjut ke:** `day27/live/2-fetch-api`
 
@@ -13,7 +13,7 @@
 - Dependency array: `[]` sekali, `[query]` saat query berubah, tanpa array setiap render
 - Di mode dev, log muncul dua kali karena `StrictMode` (bukan bug)
 
-## Tugas mandiri 1 (10 menit)
-Judul tab ikut jumlah pilihan: `Toko Kita (2 dipilih)`.
-Challenge: simpan `selectedIds` ke `localStorage` supaya tetap ada setelah reload.
-Kunci ada di `day27/solution/mandiri-1`.
+## Kunci tugas mandiri
+- Judul tab: `document.title = ... Toko Kita (${selectedIds.length} dipilih)` dengan dependency `[query, selectedIds]` (satu efek menggantikan efek judul lama).
+- Challenge: `useState(() => JSON.parse(localStorage.getItem("selectedIds") ?? "[]"))` dan efek `localStorage.setItem(...)` dengan `[selectedIds]`.
+- Jika kunci terlalu cepat dibagikan: minta student mencoba reload dulu.

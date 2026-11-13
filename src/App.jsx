@@ -14,7 +14,9 @@ const services = [
 const categories = ["Semua", "Pengiriman", "Pembayaran", "Layanan"];
 
 export default function App() {
-  const [selectedIds, setSelectedIds] = useState([]);
+  const [selectedIds, setSelectedIds] = useState(() =>
+    JSON.parse(localStorage.getItem("selectedIds") ?? "[]"),
+  );
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("Semua");
 
@@ -23,8 +25,12 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    document.title = query ? `Cari: ${query}` : "Toko Kita";
-  }, [query]);
+    document.title = query ? `Cari: ${query}` : `Toko Kita (${selectedIds.length} dipilih)`;
+  }, [query, selectedIds]);
+
+  useEffect(() => {
+    localStorage.setItem("selectedIds", JSON.stringify(selectedIds));
+  }, [selectedIds]);
 
   function toggle(id) {
     setSelectedIds((prev) =>
