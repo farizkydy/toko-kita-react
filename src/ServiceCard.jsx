@@ -1,5 +1,6 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 export default function ServiceCard({ icon, title, desc }) {
   return (
@@ -10,13 +11,8 @@ export default function ServiceCard({ icon, title, desc }) {
         <CardDescription>{desc}</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col items-center gap-3">
-        <Badge variant="secondary">Layanan</Badge>
-        <button
-          className="rounded-md bg-gray-900 px-3 py-1.5 text-sm text-white hover:bg-gray-700"
-          onClick={() => alert(title)}
-        >
-          Lihat info
-        </button>
+        <Badge variant="success">Tersedia</Badge>
+        <Button onClick={() => alert(title)}>Lihat info</Button>
       </CardContent>
     </Card>
   );
