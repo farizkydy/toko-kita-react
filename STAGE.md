@@ -1,18 +1,18 @@
-# Branch `day27/live/3-loading-error`: hasil Live Coding 3 (10 menit)
+# Branch `day27/live/4-react-query`: hasil Live Coding 4 (10 menit)
 
-**Mulai dari:** `day27/live/2-fetch-api` · **Lanjut ke:** `day27/live/4-react-query`
-
-Branch ini sudah memuat `TestimonialCard` (kunci mandiri 2) supaya semua peserta mulai dari titik sama.
+**Mulai dari:** `day27/live/3-loading-error` · **Lanjut ke:** `day27/expected-result`
 
 ## Urutan mengetik
-1. State `loading` (awal `true`) dan `error` (awal `null`)
-2. Cek `res.ok`: `fetch` tidak melempar error untuk status 404/500
-3. `.catch` mengisi error, `.finally` mematikan loading
-4. Render: "Memuat testimonial..." dan pesan error (`role="alert"`)
+1. `npm i @tanstack/react-query`
+2. `QueryClientProvider` di `main.jsx`
+3. Fungsi `fetchTestimonials` (cek `res.ok`)
+4. `useQuery({ queryKey: ["testimonials"], queryFn: fetchTestimonials, retry: false })`
+5. Hapus 3 state dan `useEffect` manual
 
 ## Poin bicara
-- Tiga keadaan data: loading, error, sukses
-- Uji dengan URL yang salah, error harus tampil
+- Tampilan sama, kode jauh lebih pendek
+- `queryKey` = identitas cache
+- `retry: false` hanya agar error langsung terlihat saat demo (default v5 mengulang 3 kali)
 
-## Tugas mandiri 3 (15 menit)
-Tombol "Coba lagi" lewat state `attempt` di dependency array. Kunci: `day27/solution/mandiri-3`.
+## Tugas mandiri 4 (10 menit)
+Ubah kodemu ke `useQuery`. Challenge: tombol "Muat ulang" dengan `refetch` dan `isFetching`. Kunci: `day27/solution/mandiri-4`.
