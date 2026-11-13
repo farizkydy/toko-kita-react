@@ -1,18 +1,10 @@
-# Branch `day27/live/4-react-query`: hasil Live Coding 4 (10 menit)
+# Branch `day27/expected-result`: hasil akhir Day 27
 
-**Mulai dari:** `day27/live/3-loading-error` · **Lanjut ke:** `day27/expected-result`
+Toko Kita dari Day 26 ditambah:
+- `useEffect`: log awal, judul tab (`Toko Kita (n dipilih)` / `Cari: ...`), pilihan tersimpan di `localStorage`
+- Bagian "Kata Pelanggan": data dari API (`jsonplaceholder /comments?_limit=6`) dalam grid `TestimonialCard`
+- `useQuery` dengan loading, error, "Coba lagi", dan "Muat ulang"
 
-## Urutan mengetik
-1. `npm i @tanstack/react-query`
-2. `QueryClientProvider` di `main.jsx`
-3. Fungsi `fetchTestimonials` (cek `res.ok`)
-4. `useQuery({ queryKey: ["testimonials"], queryFn: fetchTestimonials, retry: false })`
-5. Hapus 3 state dan `useEffect` manual
-
-## Poin bicara
-- Tampilan sama, kode jauh lebih pendek
-- `queryKey` = identitas cache
-- `retry: false` hanya agar error langsung terlihat saat demo (default v5 mengulang 3 kali)
-
-## Tugas mandiri 4 (10 menit)
-Ubah kodemu ke `useQuery`. Challenge: tombol "Muat ulang" dengan `refetch` dan `isFetching`. Kunci: `day27/solution/mandiri-4`.
+## Goal untuk dibuka di awal sesi
+"Hari ini toko kita mengambil testimonial pelanggan dari server, lengkap dengan loading dan tombol coba lagi."
+Tunjukkan hasil jalan (`npm run dev`), bukan kodenya.
