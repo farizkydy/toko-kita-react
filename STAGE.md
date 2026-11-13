@@ -15,6 +15,7 @@
 1. Ganti `<div>` kartu menjadi `Card`, `CardHeader`, `CardTitle`, `CardDescription`, `CardContent`
 2. Tambah `Badge`
 3. Efek hover lewat `className`: `hover:-translate-y-1 hover:shadow-lg`
+4. Layout: header dan grid responsif `grid-cols-1 sm:grid-cols-2 lg:grid-cols-4` (kecilkan jendela untuk demo)
 
 ## Poin bicara
 - UI library = komponen jadi, kita tinggal rakit dan atur lewat `className`
