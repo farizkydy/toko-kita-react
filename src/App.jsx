@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Testimonials from "./Testimonials";
 import ServiceCard from "./ServiceCard";
 import { formatRupiah } from "./lib/format";
 import { cn } from "@/lib/utils";
@@ -90,6 +91,7 @@ export default function App() {
               ))}
             </div>
           )}
+        <Testimonials />
         </section>
         <aside className="h-fit rounded-xl border bg-white p-4">
           <h3 className="mb-2 text-lg font-semibold">Terpilih: {selectedIds.length} layanan</h3>

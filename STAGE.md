@@ -1,19 +1,21 @@
-# Branch `day27/live/1-use-effect`: hasil Live Coding 1 (10 menit)
+# Branch `day27/live/2-fetch-api`: hasil Live Coding 2 (15 menit)
 
-**Mulai dari:** `day27/study-case` · **Lanjut ke:** `day27/live/2-fetch-api`
+**Mulai dari:** `day27/live/1-use-effect` · **Lanjut ke:** `day27/live/3-loading-error`
 
-## Urutan mengetik (sama dengan slide)
-1. `import { useEffect, useState } from "react"`
-2. Efek pertama dengan `[]`: `console.log("App tampil pertama kali")`
-3. Efek kedua dengan `[query]`: `document.title` ikut isi kolom cari
-4. Ketik di kolom cari, lihat judul tab berubah
+## Urutan mengetik
+1. Buat `src/Testimonials.jsx`, `const API_URL = "https://jsonplaceholder.typicode.com/comments?_limit=6"`
+2. `useState([])` untuk `testimonials`
+3. `useEffect(() => { fetch(API_URL).then(res => res.json()).then(setTestimonials) }, [])`
+4. Tampilkan jumlah dan daftar `name` (dulu `<ul>` sederhana)
+5. Pasang `<Testimonials />` di `App.jsx`
 
 ## Poin bicara
-- Render itu murni; urusan di luar render (judul tab, log, request) ditaruh di `useEffect`
-- Dependency array: `[]` sekali, `[query]` saat query berubah, tanpa array setiap render
-- Di mode dev, log muncul dua kali karena `StrictMode` (bukan bug)
+- Request/response, JSON, status code
+- Kenapa `fetch` di `useEffect` dengan `[]`: sekali setelah render pertama
+- `name` pada data berisi kalimat lorem ipsum; pakai sebagai judul ulasan
 
-## Tugas mandiri 1 (10 menit)
-Judul tab ikut jumlah pilihan: `Toko Kita (2 dipilih)`.
-Challenge: simpan `selectedIds` ke `localStorage` supaya tetap ada setelah reload.
-Kunci ada di `day27/solution/mandiri-1`.
+## Cadangan jaringan
+Ganti `API_URL` menjadi `"/testimonials.json"` (file ada di `public/`).
+
+## Tugas mandiri 2 (15 menit)
+Buat `TestimonialCard` (Card dari Day 26) dan tampilkan 6 kartu dalam grid. Kunci: `day27/solution/mandiri-2`.
