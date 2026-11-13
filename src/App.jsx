@@ -9,6 +9,7 @@ export default function App() {
         <ServiceCard icon="🛡️" title="Garansi 30 Hari" desc="Tukar jika rusak" />
         <ServiceCard icon="💵" title="Bayar di Tempat (COD)" desc="Bayar saat barang tiba" />
         <ServiceCard icon="↩️" title="Retur Mudah" desc="Tanpa ribet, 7 hari" />
+        <ServiceCard icon="🎁" title="Poin Reward" desc="Kumpulkan poin tiap belanja" />
       </div>
     </main>
   );
