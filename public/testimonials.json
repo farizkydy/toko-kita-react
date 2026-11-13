@@ -1,0 +1,44 @@
+[
+  {
+    "postId": 1,
+    "id": 1,
+    "name": "pengiriman cepat dan rapi",
+    "email": "user1@example.com",
+    "body": "Barang sampai sehari setelah dipesan, kemasan aman."
+  },
+  {
+    "postId": 1,
+    "id": 2,
+    "name": "garansi sangat membantu",
+    "email": "user2@example.com",
+    "body": "Barang rusak ditukar tanpa banyak pertanyaan."
+  },
+  {
+    "postId": 1,
+    "id": 3,
+    "name": "bayar di tempat bikin tenang",
+    "email": "user3@example.com",
+    "body": "Saya baru bayar setelah barang dicek di rumah."
+  },
+  {
+    "postId": 1,
+    "id": 4,
+    "name": "retur mudah",
+    "email": "user4@example.com",
+    "body": "Proses retur selesai dalam dua hari."
+  },
+  {
+    "postId": 1,
+    "id": 5,
+    "name": "poin reward lumayan",
+    "email": "user5@example.com",
+    "body": "Poin bisa ditukar potongan harga di belanja berikutnya."
+  },
+  {
+    "postId": 1,
+    "id": 6,
+    "name": "pelayanan ramah",
+    "email": "user6@example.com",
+    "body": "Admin cepat membalas dan solutif."
+  }
+]
