@@ -1,6 +1,6 @@
-# Branch `live/3-parent-child`: hasil Live Coding 3 (15 menit)
+# Branch `day26/live/3-parent-child`: hasil Live Coding 3 (15 menit)
 
-**Mulai dari:** `live/2-ui-library` · **Lanjut ke:** `live/4-ai-prompting`
+**Mulai dari:** `day26/live/2-ui-library` · **Lanjut ke:** `day26/live/4-ai-prompting`
 
 ## Urutan mengetik (sama dengan slide)
 1. `services` array: `id`, `category`, `price`, `popular` (data)
@@ -31,4 +31,4 @@ Ketik di kolom cari → `setQuery` → render ulang → `filter` menyisakan kart
 5. Panel ringkasan: daftar terpilih + total harga
 6. Empty state saat tidak ada kartu yang cocok
 
-Solusi: `solution/mandiri-3`. Tingkat 1–3 wajib, 4–6 untuk yang cepat (dibantu hint bertahap).
+Solusi: `day26/solution/mandiri-3`. Tingkat 1–3 wajib, 4–6 untuk yang cepat (dibantu hint bertahap).
