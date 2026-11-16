@@ -1,11 +1,11 @@
-export default function ServiceCard({ icon, title, desc }) {
+export default function ServiceCard({ icon, title, desc, highlight = false }) {
   const cardStyle = {
-    border: "1px solid #e5e7eb",
+    border: highlight ? "2px solid #3b82f6" : "1px solid #e5e7eb",
     borderRadius: 12,
     padding: 16,
     width: 220,
     textAlign: "center",
-    backgroundColor: "#ffffff",
+    backgroundColor: highlight ? "#dbeafe" : "#ffffff",
   };
 
   return (
